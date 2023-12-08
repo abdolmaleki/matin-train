@@ -1,0 +1,45 @@
+<svg width="92" height="142" viewBox="0 0 92 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="46" cy="46.4126" rx="46" ry="46.4126" fill="#7DD1C1" fill-opacity="0.08"/>
+<ellipse cx="46" cy="46.4126" rx="31.815" ry="32.1004" fill="#7DD1C1" fill-opacity="0.12"/>
+<g filter="url(#filter0_b_393_32486)">
+<rect x="23.1013" y="29.4424" width="45.7974" height="27.3978" rx="8" fill="url(#paint0_linear_393_32486)"/>
+</g>
+<g clip-path="url(#clip0_393_32486)" filter="url(#filter1_dd_393_32486)">
+<path d="M59.41 33.1227H32.995C29.5431 33.1227 26.7488 35.8454 26.7488 39.2088V103.914C26.7488 107.277 29.5431 110 32.995 110H59.41C62.8619 110 65.6563 107.277 65.6563 103.914V39.2088C65.6563 35.8454 62.8619 33.1227 59.41 33.1227ZM63.7824 103.914C63.7824 106.268 61.8263 108.174 59.41 108.174H32.995C30.5787 108.174 28.6227 106.268 28.6227 103.914V39.2088C28.6227 36.8544 30.5787 34.9485 32.995 34.9485H59.41C61.8263 34.9485 63.7824 36.8544 63.7824 39.2088V103.914Z" fill="white"/>
+<path d="M59.4099 34.9485H32.9949C30.5801 34.9485 28.6226 36.8559 28.6226 39.2088V103.914C28.6226 106.267 30.5801 108.174 32.9949 108.174H59.4099C61.8247 108.174 63.7823 106.267 63.7823 103.914V39.2088C63.7823 36.8559 61.8247 34.9485 59.4099 34.9485Z" fill="#F4F6F8"/>
+<path d="M55.58 34.9485C55.58 34.9485 55.1527 35.0286 55.1527 35.3969V35.6692C55.1527 36.6782 54.3143 37.495 53.2788 37.495H39.2412C38.2056 37.495 37.3673 36.6782 37.3673 35.6692V35.3969C37.3673 35.0126 36.9399 34.9485 36.9399 34.9485H55.5965H55.58Z" fill="white"/>
+<path d="M51.4379 35.7013C51.4379 35.9736 51.2078 36.1818 50.9448 36.1818C50.6818 36.1818 50.4517 35.9576 50.4517 35.7013C50.4517 35.4451 50.6818 35.2208 50.9448 35.2208C51.2078 35.2208 51.4379 35.4451 51.4379 35.7013Z" fill="#919EAB" fill-opacity="0.48"/>
+<path d="M48.1668 35.9895H44.3862C44.2218 35.9895 44.0903 35.8614 44.0903 35.7013C44.0903 35.5411 44.2218 35.413 44.3862 35.413H48.1668C48.3312 35.413 48.4627 35.5411 48.4627 35.7013C48.4627 35.8614 48.3312 35.9895 48.1668 35.9895Z" fill="#919EAB" fill-opacity="0.48"/>
+</g>
+<defs>
+<filter id="filter0_b_393_32486" x="15.1013" y="21.4424" width="61.7974" height="43.3978" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feGaussianBlur in="BackgroundImageFix" stdDeviation="4"/>
+<feComposite in2="SourceAlpha" operator="in" result="effect1_backgroundBlur_393_32486"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_backgroundBlur_393_32486" result="shape"/>
+</filter>
+<filter id="filter1_dd_393_32486" x="6.74878" y="25.1227" width="78.9075" height="116.877" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feMorphology radius="4" operator="erode" in="SourceAlpha" result="effect1_dropShadow_393_32486"/>
+<feOffset dy="12"/>
+<feGaussianBlur stdDeviation="12"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.568627 0 0 0 0 0.619608 0 0 0 0 0.670588 0 0 0 0.12 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_393_32486"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset/>
+<feGaussianBlur stdDeviation="1"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0.568627 0 0 0 0 0.619608 0 0 0 0 0.670588 0 0 0 0.2 0"/>
+<feBlend mode="normal" in2="effect1_dropShadow_393_32486" result="effect2_dropShadow_393_32486"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_393_32486" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_393_32486" x1="23.1013" y1="29.4424" x2="47.2423" y2="69.7958" gradientUnits="userSpaceOnUse">
+<stop stop-color="#C9F9F0"/>
+<stop offset="1" stop-color="#54A89E"/>
+</linearGradient>
+<clipPath id="clip0_393_32486">
+<rect width="38.9075" height="76.8773" fill="white" transform="translate(26.7488 33.1227)"/>
+</clipPath>
+</defs>
+</svg>

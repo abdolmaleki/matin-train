@@ -1,0 +1,18 @@
+{
+  "appName": "Hoivalani",
+  "welcomeToHoivalani" : "Välkommen till \n Hoivalani",
+  "pleaseInsertYourNFCCard" : "Sätt i ditt NFC-kort",
+  "signIn" : "Logga in",
+  "selectLanguage" : "Välj språk",
+  "yourUsernameAndPassword" : "Ditt användarnamn och lösenord",
+  "rememberMe" : "Kom ihåg mig",
+  "forgotPassword" : "glömt ditt lösenord?",
+  "poweredBy" : "Drivs av",
+  "hoiTekFi" : "HoiTek.fi",
+  "englishUnitedStates" : "Engelska Förenta Staterna",
+  "finnish" : "finska",
+  "sweden" : "Sverige",
+  "email" : "E-post",
+  "password" : "Lösenord",
+  "login" : "Logga in"
+ }

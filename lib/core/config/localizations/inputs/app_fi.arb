@@ -1,0 +1,20 @@
+{
+  "appName": "Hoivalani",
+  "welcomeToHoivalani" : "Tervetuloa To \n Hoivalani",
+  "pleaseInsertYourNFCCard" : "Aseta NFC-korttisi",
+  "signIn" : "Kirjaudu sisään",
+  "selectLanguage" : "Valitse kieli",
+  "yourUsernameAndPassword" : "Käyttäjätunnuksesi ja salasanasi",
+  "rememberMe" : "Muista minut",
+  "forgotPassword" : "Unohtuiko salasana?",
+  "poweredBy" : "Powered By",
+  "hoiTekFi" : "HoiTek.fi",
+  "englishUnitedStates" : "englanti - Yhdysvallat",
+  "finnish" : "Suomalainen",
+  "sweden" : "Ruotsi",
+  "email" : "Sähköposti",
+  "password" : "Salasana",
+  "login" : "Kirjaudu sisään",
+  "emailIsNotValid" : "Sähköposti ei kelpaa"
+
+ }

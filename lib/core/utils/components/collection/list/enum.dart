@@ -1,0 +1,1 @@
+enum GroupedListOrder { asc, desc }

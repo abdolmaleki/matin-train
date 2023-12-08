@@ -1,0 +1,1 @@
+const String mockAvatarUrl="https://img.freepik.com/free-vector/businessman-character-avatar-isolated_24877-60111.jpg?q=10&h=200";

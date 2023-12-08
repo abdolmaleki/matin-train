@@ -1,0 +1,1 @@
+enum InputSize { normal, small }
