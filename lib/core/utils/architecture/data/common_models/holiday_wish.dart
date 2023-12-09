@@ -1,5 +1,6 @@
-import 'package:hoivalani/core/utils/architecture/data/common_models/holiday.dart';
-import 'package:hoivalani/core/utils/architecture/data/common_models/staff.dart';
+
+import 'package:team_project/core/utils/architecture/data/common_models/holiday.dart';
+import 'package:team_project/core/utils/architecture/data/common_models/staff.dart';
 
 class HolidayWishModel {
   int id;

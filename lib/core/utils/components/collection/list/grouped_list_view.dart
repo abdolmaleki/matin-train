@@ -4,7 +4,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/gestures.dart';
 import 'package:flutter/widgets.dart';
-import 'package:hoivalani/core/utils/components/collection/list/enum.dart';
+import 'package:team_project/core/utils/components/collection/list/enum.dart';
 
 /// A groupable list of widgets similar to [ListView], execpt that the
 /// items can be sectioned into groups.

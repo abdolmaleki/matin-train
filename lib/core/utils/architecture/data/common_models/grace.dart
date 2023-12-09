@@ -1,4 +1,5 @@
-import 'package:hoivalani/core/utils/architecture/data/common_models/reward.dart';
+
+import 'package:team_project/core/utils/architecture/data/common_models/reward.dart';
 
 class GraceModel {
 

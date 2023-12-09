@@ -1,4 +1,4 @@
-import 'package:hoivalani/core/utils/architecture/domain/common_enums/staff_type.dart';
+import 'package:team_project/core/utils/architecture/domain/common_enums/staff_type.dart';
 
 class StaffModel {
   int? id;

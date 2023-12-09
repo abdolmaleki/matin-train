@@ -1,4 +1,5 @@
-import 'package:hoivalani/core/utils/architecture/data/common_models/user.dart';
+
+import 'package:team_project/core/utils/architecture/data/common_models/user.dart';
 
 class AppValidator {
   static bool isUserDispatcher(UserModel user) {

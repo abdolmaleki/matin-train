@@ -1,10 +1,10 @@
 import 'package:faker/faker.dart';
-import 'package:hoivalani/core/config/dependency_injection/get_it.dart';
-import 'package:hoivalani/core/utils/architecture/data/common_models/transportation.dart';
-import 'package:hoivalani/core/utils/architecture/domain/common_enums/shift_status.dart';
-import 'package:hoivalani/core/utils/architecture/domain/common_enums/shift_type.dart';
-import 'package:hoivalani/core/utils/architecture/domain/common_enums/staff_type.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_factory.dart';
+import 'package:team_project/core/config/dependency_injection/get_it.dart';
+import 'package:team_project/core/utils/architecture/data/common_models/transportation.dart';
+import 'package:team_project/core/utils/architecture/domain/common_enums/shift_status.dart';
+import 'package:team_project/core/utils/architecture/domain/common_enums/shift_type.dart';
+import 'package:team_project/core/utils/architecture/domain/common_enums/staff_type.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_factory.dart';
 import 'package:latlong2/latlong.dart';
 
 class MockTransportationList implements MockData {

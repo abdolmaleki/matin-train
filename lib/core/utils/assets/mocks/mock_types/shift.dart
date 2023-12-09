@@ -1,9 +1,9 @@
 import 'package:faker/faker.dart';
-import 'package:hoivalani/core/config/dependency_injection/get_it.dart';
-import 'package:hoivalani/core/utils/architecture/data/common_models/cycle_visit.dart';
-import 'package:hoivalani/core/utils/architecture/data/common_models/shift.dart';
-import 'package:hoivalani/core/utils/architecture/data/common_models/visit.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_factory.dart';
+import 'package:team_project/core/config/dependency_injection/get_it.dart';
+import 'package:team_project/core/utils/architecture/data/common_models/cycle_visit.dart';
+import 'package:team_project/core/utils/architecture/data/common_models/shift.dart';
+import 'package:team_project/core/utils/architecture/data/common_models/visit.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_factory.dart';
 
 class MockCycleVisit implements MockData {
   @override

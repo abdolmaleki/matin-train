@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/utils/constants/dimensions/spaces.dart';
+import 'package:team_project/core/utils/constants/dimensions/spaces.dart';
 
 class CustomDetailsTable extends StatelessWidget {
   const CustomDetailsTable({super.key, required this.items});

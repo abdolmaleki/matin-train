@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'package:hoivalani/core/utils/architecture/data/common_models/reward.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_factory.dart';
+import 'package:team_project/core/utils/architecture/data/common_models/reward.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_factory.dart';
 
 class MockRewardList implements MockData {
   String jsonData =

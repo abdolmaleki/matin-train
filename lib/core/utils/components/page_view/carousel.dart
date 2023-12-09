@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/utils/assets/app_svg.dart';
-import 'package:hoivalani/core/utils/components/images/rounded_image.dart';
-import 'package:hoivalani/core/utils/constants/theme/colors.dart';
+import 'package:team_project/core/utils/assets/app_svg.dart';
+import 'package:team_project/core/utils/components/images/rounded_image.dart';
+import 'package:team_project/core/utils/constants/theme/colors.dart';
 
 class CustomCarousel extends StatelessWidget {
   CustomCarousel({super.key, required this.urls});

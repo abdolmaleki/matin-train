@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/utils/assets/app_svg.dart';
-import 'package:hoivalani/core/utils/components/containers/circle_container.dart';
-import 'package:hoivalani/core/utils/components/stepper/enum.dart';
-import 'package:hoivalani/core/utils/components/stepper/stepper_content.dart';
-import 'package:hoivalani/core/utils/constants/theme/colors.dart';
+import 'package:team_project/core/utils/assets/app_svg.dart';
+import 'package:team_project/core/utils/components/containers/circle_container.dart';
+import 'package:team_project/core/utils/components/stepper/enum.dart';
+import 'package:team_project/core/utils/components/stepper/stepper_content.dart';
+import 'package:team_project/core/utils/constants/theme/colors.dart';
 
 double stepWidth = MediaQueryData.fromView(
         WidgetsBinding.instance.platformDispatcher.views.single)

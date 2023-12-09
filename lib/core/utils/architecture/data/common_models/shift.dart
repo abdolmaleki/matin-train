@@ -1,4 +1,4 @@
-import 'package:hoivalani/core/utils/architecture/data/common_models/visit.dart';
+import 'package:team_project/core/utils/architecture/data/common_models/visit.dart';
 
 class ShiftModel {
   OnGoingCustomer? onGoingCustomer;

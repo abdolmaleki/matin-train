@@ -1,4 +1,4 @@
-import 'package:hoivalani/core/utils/architecture/data/common_models/address.dart';
+import 'package:team_project/core/utils/architecture/data/common_models/address.dart';
 
 class RelativeModel {
   String? firstName;

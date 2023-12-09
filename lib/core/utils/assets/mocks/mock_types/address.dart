@@ -1,7 +1,7 @@
 import 'dart:convert';
-import 'package:hoivalani/core/utils/architecture/data/common_models/address.dart';
-import 'package:hoivalani/core/utils/assets/mocks/enum.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_factory.dart';
+import 'package:team_project/core/utils/architecture/data/common_models/address.dart';
+import 'package:team_project/core/utils/assets/mocks/enum.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_factory.dart';
 
 class MockAddress implements MockData {
 

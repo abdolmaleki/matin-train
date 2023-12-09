@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/config/themes/typography.dart';
-import 'package:hoivalani/core/utils/constants/theme/colors.dart';
+import 'package:team_project/core/config/themes/typography.dart';
+import 'package:team_project/core/utils/constants/theme/colors.dart';
 
 //Main Theme
 final mainTheme = ThemeData(

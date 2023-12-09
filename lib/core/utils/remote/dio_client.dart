@@ -1,5 +1,5 @@
 import 'package:dio/dio.dart';
-import 'package:hoivalani/core/utils/remote/dio_interceptor.dart';
+import 'package:team_project/core/utils/remote/dio_interceptor.dart';
 
 class DioClient {
   static Dio getClient() {

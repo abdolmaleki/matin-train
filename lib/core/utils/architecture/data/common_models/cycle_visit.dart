@@ -1,4 +1,5 @@
-import 'package:hoivalani/core/utils/architecture/data/common_models/shift.dart';
+
+import 'package:team_project/core/utils/architecture/data/common_models/shift.dart';
 
 class CycleVisitsModel {
   String? createdAt;

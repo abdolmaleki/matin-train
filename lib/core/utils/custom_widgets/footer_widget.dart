@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/config/localizations/constants.dart';
-import 'package:hoivalani/core/utils/constants/theme/colors.dart';
+import 'package:team_project/core/utils/constants/theme/colors.dart';
 
 class FooterWidget extends StatelessWidget {
   const FooterWidget({Key? key}) : super(key: key);
@@ -11,7 +10,7 @@ class FooterWidget extends StatelessWidget {
       text: TextSpan(
         children: <TextSpan>[
           TextSpan(
-              text: appIntl!.poweredBy,
+              text: "poweredBy",
               style: Theme.of(context)
                   .textTheme
                   .bodySmall!
@@ -20,7 +19,7 @@ class FooterWidget extends StatelessWidget {
                       .secondaryHeaderColor)),
           const TextSpan(text: " "),
           TextSpan(
-              text: appIntl!.hoiTekFi,
+              text: "hoiTekFi",
               style: Theme.of(context)
                   .textTheme
                   .bodySmall!

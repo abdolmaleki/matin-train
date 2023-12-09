@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/utils/components/color/solid_filter.dart';
-import 'package:hoivalani/core/utils/constants/theme/colors.dart';
+import 'package:team_project/core/utils/components/color/solid_filter.dart';
+import 'package:team_project/core/utils/constants/theme/colors.dart';
 
 class CustomCircleIconAvatar extends StatelessWidget {
   const CustomCircleIconAvatar({super.key, required this.child});

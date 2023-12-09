@@ -1,14 +1,13 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/config/localizations/constants.dart';
-import 'package:hoivalani/core/utils/architecture/data/common_models/attachment.dart';
-import 'package:hoivalani/core/utils/assets/app_svg.dart';
-import 'package:hoivalani/core/utils/components/buttons/elevated_button.dart';
-import 'package:hoivalani/core/utils/components/buttons/enums/button_color.dart';
-import 'package:hoivalani/core/utils/components/buttons/enums/button_size.dart';
-import 'package:hoivalani/core/utils/custom_widgets/list/atteachment_list/attachment_row.dart';
-import 'package:hoivalani/core/utils/helper/platform_helper.dart';
+import 'package:team_project/core/utils/architecture/data/common_models/attachment.dart';
+import 'package:team_project/core/utils/assets/app_svg.dart';
+import 'package:team_project/core/utils/components/buttons/elevated_button.dart';
+import 'package:team_project/core/utils/components/buttons/enums/button_color.dart';
+import 'package:team_project/core/utils/components/buttons/enums/button_size.dart';
+import 'package:team_project/core/utils/custom_widgets/list/atteachment_list/attachment_row.dart';
+import 'package:team_project/core/utils/helper/platform_helper.dart';
 
 class CustomAttachmentList extends StatefulWidget {
   const CustomAttachmentList(
@@ -65,7 +64,7 @@ class _CustomAttachmentListState extends State<CustomAttachmentList> {
             mainAxisAlignment: MainAxisAlignment.end,
             children: [
               CustomElevatedButton(
-                label: appIntl!.attachments,
+                label: "Attachments",
                 buttonColor: ButtonColor.defaults,
                 onPressed: () {
                   _uploadFile();

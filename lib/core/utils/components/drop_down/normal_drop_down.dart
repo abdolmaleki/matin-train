@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/utils/assets/app_svg.dart';
-import 'package:hoivalani/core/utils/components/color/solid_filter.dart';
-import 'package:hoivalani/core/utils/components/containers/shadowed_container.dart';
-import 'package:hoivalani/core/utils/components/drop_down/drop_down_item.dart';
-import 'package:hoivalani/core/utils/components/drop_down/enum.dart';
-import 'package:hoivalani/core/utils/components/images/circle_avatar.dart';
-import 'package:hoivalani/core/utils/constants/theme/colors.dart';
+import 'package:team_project/core/utils/assets/app_svg.dart';
+import 'package:team_project/core/utils/components/color/solid_filter.dart';
+import 'package:team_project/core/utils/components/containers/shadowed_container.dart';
+import 'package:team_project/core/utils/components/drop_down/drop_down_item.dart';
+import 'package:team_project/core/utils/components/drop_down/enum.dart';
+import 'package:team_project/core/utils/components/images/circle_avatar.dart';
+import 'package:team_project/core/utils/constants/theme/colors.dart';
 
 class CustomDropDown extends StatefulWidget {
   const CustomDropDown(

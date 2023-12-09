@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/utils/constants/theme/colors.dart';
-import 'package:hoivalani/core/utils/helper/date_time.dart';
+import 'package:team_project/core/utils/constants/theme/colors.dart';
+import 'package:team_project/core/utils/helper/date_time.dart';
 
 class WeekdayRowWidget extends StatelessWidget {
   const WeekdayRowWidget(

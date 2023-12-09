@@ -1,10 +1,10 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/utils/architecture/data/common_models/attachment.dart';
-import 'package:hoivalani/core/utils/components/containers/circle_container.dart';
-import 'package:hoivalani/core/utils/components/images/rounded_image.dart';
-import 'package:hoivalani/core/utils/constants/theme/colors.dart';
+import 'package:team_project/core/utils/architecture/data/common_models/attachment.dart';
+import 'package:team_project/core/utils/components/containers/circle_container.dart';
+import 'package:team_project/core/utils/components/images/rounded_image.dart';
+import 'package:team_project/core/utils/constants/theme/colors.dart';
 
 class AttachmentRowWidget extends StatelessWidget {
   const AttachmentRowWidget(

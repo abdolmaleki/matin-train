@@ -1,7 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/config/themes/typography.dart';
-import 'package:hoivalani/core/utils/assets/app_svg.dart';
+import 'package:team_project/core/config/themes/typography.dart';
+import 'package:team_project/core/utils/assets/app_svg.dart';
 
 class LabeledReturnButton extends StatelessWidget {
   const LabeledReturnButton({super.key, required this.label});
