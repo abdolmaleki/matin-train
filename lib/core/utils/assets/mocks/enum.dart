@@ -35,5 +35,6 @@ enum MockType{
   staffPunishmentList,
   quizList,
   ticketList,
-  keikkalaShiftList
+  keikkalaShiftList,
+  sectionList,
 }

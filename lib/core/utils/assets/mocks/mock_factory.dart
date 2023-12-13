@@ -22,6 +22,7 @@ import 'package:team_project/core/utils/assets/mocks/mock_types/relative.dart';
 import 'package:team_project/core/utils/assets/mocks/mock_types/report.dart';
 import 'package:team_project/core/utils/assets/mocks/mock_types/reward.dart';
 import 'package:team_project/core/utils/assets/mocks/mock_types/role_permission.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/section.dart';
 import 'package:team_project/core/utils/assets/mocks/mock_types/shift.dart';
 import 'package:team_project/core/utils/assets/mocks/mock_types/staff.dart';
 import 'package:team_project/core/utils/assets/mocks/mock_types/staff_punishments.dart';
@@ -107,6 +108,8 @@ abstract class MockData {
         return MockStaffPunishmentsList();
       case MockType.keikkalaShiftList:
         return MockKeikkalaShiftList();
+      case MockType.sectionList:
+        return MockSectionList();
     }
   }
 

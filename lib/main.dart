@@ -5,6 +5,8 @@ import 'package:team_project/core/config/config/https/https_handler.dart';
 import 'package:team_project/core/config/dependency_injection/get_it.dart';
 import 'package:team_project/features/feature_root/presentation/pages/root_page.dart';
 
+
+
 void main() async {
   await preLaunchConfig();
   runApp(const RootPage());

@@ -39,8 +39,4 @@ abstract class AuthService {
 
   @PUT("users/accept-policy")
   Future<ApiResponse<BaseResponse>> policy();
-
-
-
-
 }

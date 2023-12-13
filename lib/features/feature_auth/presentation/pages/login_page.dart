@@ -5,6 +5,7 @@ import 'package:team_project/core/utils/architecture/presentation/error_handler.
 import 'package:team_project/core/utils/assets/app_svg.dart';
 import 'package:team_project/core/utils/components/buttons/enums/button_size.dart';
 import 'package:team_project/core/utils/components/buttons/elevated_button.dart';
+import 'package:team_project/core/utils/components/divider/titled_divider.dart';
 import 'package:team_project/core/utils/components/form/form.dart';
 import 'package:team_project/core/utils/components/text_fields/enum.dart';
 import 'package:team_project/core/utils/components/text_fields/normal_text_field.dart';
@@ -242,7 +243,8 @@ class _LoginPageState extends State<LoginPage> {
   void _checkAuthResponse(AuthSuccessful state) {
     if (state.auth.oauth2!.user!.privacyPolicyAcceptedAt == null) {
       context.router.replace(const TermsPrivacyRoute());
-    }  else {
+    } else {
+      context.router.replace( const SectionRoute());
       //Todo by Matin
     }
   }
