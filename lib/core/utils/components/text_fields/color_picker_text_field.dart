@@ -32,11 +32,6 @@ class CustomColorPickerTextField extends StatefulWidget {
 class _CustomDatePickerTextFieldState extends State<CustomColorPickerTextField> {
   final FocusNode _focusNode = FocusNode();
   Color _currentColor = const Color(0xff2196f3);
-
-
-
-
-
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(
@@ -48,7 +43,6 @@ class _CustomDatePickerTextFieldState extends State<CustomColorPickerTextField> 
       inputSize: widget.inputSize,
       validator: widget.validator,
       suffixIcon: Container(
-
         width: 18,
         height: 18,
         decoration: BoxDecoration(
