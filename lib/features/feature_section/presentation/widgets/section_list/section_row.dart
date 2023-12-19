@@ -2,12 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_project/core/utils/architecture/data/common_models/section.dart';
 import 'package:team_project/core/utils/assets/app_svg.dart';
-import 'package:team_project/core/utils/components/buttons/elevated_button.dart';
-import 'package:team_project/core/utils/components/buttons/enums/button_size.dart';
 import 'package:team_project/core/utils/components/containers/shadowed_container.dart';
 import 'package:team_project/core/utils/constants/theme/colors.dart';
 import 'package:team_project/features/feature_section/presentation/bloc/section_bloc.dart';
 import 'package:team_project/features/feature_section/presentation/bloc/section_state.dart';
+import 'package:team_project/features/feature_section/presentation/widgets/delete_inkwell.dart';
 
 class SectionRowWidget extends StatefulWidget {
   const SectionRowWidget({super.key});
@@ -19,7 +18,6 @@ class SectionRowWidget extends StatefulWidget {
 class _SectionRowWidgetState extends State<SectionRowWidget> {
   List<SectionModel> section = [];
 
-  get index => section[index];
 
   @override
   void initState() {
@@ -39,7 +37,6 @@ class _SectionRowWidgetState extends State<SectionRowWidget> {
         if (state is SectionAdded) {
           context.read<SectionBloc>().loadSection();
         }
-        if (state is SectionRemoved) {}
       }
     }, builder: (context, state) {
       return ListView.builder(
@@ -76,71 +73,7 @@ class _SectionRowWidgetState extends State<SectionRowWidget> {
                               const SizedBox(
                                 width: 5,
                               ),
-                              InkWell(
-                                child: AppIcon.trash,
-                                onTap: () {
-                                  showModalBottomSheet(
-                                      context: context,
-                                      builder: (_) {
-                                        return BlocProvider.value(
-                                          value: BlocProvider.of<SectionBloc>(
-                                              context),
-                                          child: SizedBox(
-                                            height: 188,
-                                            child: Column(
-                                              children: [
-                                                Container(
-                                                  height: 48,
-                                                  decoration: BoxDecoration(
-                                                      borderRadius:
-                                                          BorderRadius.circular(
-                                                              16),
-                                                      color:
-                                                          const Color.fromRGBO(
-                                                              145,
-                                                              158,
-                                                              171,
-                                                              0.24)),
-                                                  child: const Center(
-                                                    child: Text(
-                                                      'Move to Trash',
-                                                      style: TextStyle(
-                                                          fontWeight:
-                                                              FontWeight.w700,
-                                                          fontSize: 13,
-                                                          color: Color(
-                                                              0xff000000)),
-                                                    ),
-                                                  ),
-                                                ),
-                                                const SizedBox(height: 16,),
-                                                Align(
-                                                  alignment: Alignment.center,
-                                                  child: Text('Are you sure about moving this \n item to trash? ',style: theme.textTheme.bodyLarge,),
-                                                ),
-                                                const SizedBox(height: 16,),
-                                                Container(
-                                                  margin: const EdgeInsets.symmetric(horizontal: 20),
-                                                  child: Row(
-                                                    children: [
-                                                      Expanded(child: CustomElevatedButton(onPressed: (){
-                                                        context.read<SectionBloc>().removeSection(section[index]);
-                                                        Navigator.of(context).pop();
-                                                      }, label: 'Confirm', buttonSize: ButtonSize.medium,)),
-                                                      const SizedBox(width:16 ,),
-                                                      Expanded(child: CustomElevatedButton(onPressed: (){
-                                                        Navigator.of(context).pop();
-                                                      }, label: 'Cancel', buttonSize: ButtonSize.medium,)),
-                                                    ],
-                                                  ),
-                                                )
-                                              ],
-                                            ),
-                                          ),
-                                        );
-                                      });
-                                },
-                              ),
+                              DeleteInkWellWidget(section: section[index])
                             ],
                           )
                         ],

@@ -1,14 +1,14 @@
 
 import 'package:flutter/material.dart';
 
-class TeamPage extends StatefulWidget {
-  const TeamPage({Key? key}) : super(key: key);
+class Team extends StatefulWidget {
+  const Team({Key? key}) : super(key: key);
 
   @override
-  State<TeamPage> createState() => _TeamPageState();
+  State<Team> createState() => _TeamState();
 }
 
-class _TeamPageState extends State<TeamPage> {
+class _TeamState extends State<Team> {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
@@ -16,7 +16,7 @@ class _TeamPageState extends State<TeamPage> {
       home: Scaffold(
         resizeToAvoidBottomInset: true,
         body: Center(
-          child: Text('TeamPage'),
+          child: Text('Team'),
         ),
       ),
     );

@@ -17,7 +17,7 @@ class MockSectionList implements MockData {
         1,
         (index) => SectionModel(
             description: faker.lorem.sentence(),
-            number: faker.randomGenerator.integer(0),
+            number: faker.randomGenerator.integer(1),
             color: Colors.blue,
             title: 'Helsinki'
         ));

@@ -1,14 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_project/core/utils/architecture/data/common_models/section.dart';
-import 'package:team_project/core/utils/components/buttons/elevated_button.dart';
-import 'package:team_project/core/utils/components/buttons/enums/button_size.dart';
 import 'package:team_project/core/utils/components/divider/titled_divider.dart';
 import 'package:team_project/core/utils/components/form/form.dart';
 import 'package:team_project/core/utils/components/text_fields/color_picker_text_field.dart';
 import 'package:team_project/core/utils/components/text_fields/normal_text_field.dart';
 import 'package:team_project/core/utils/components/text_fields/text_area.dart';
-import 'package:team_project/features/feature_section/presentation/bloc/section_bloc.dart';
+import 'package:team_project/features/feature_section/presentation/widgets/add_section_button.dart';
 
 class SectionFormWidget extends StatefulWidget {
   const SectionFormWidget({super.key});
@@ -18,14 +15,14 @@ class SectionFormWidget extends StatefulWidget {
 }
 
 class _SectionFormWidgetState extends State<SectionFormWidget> {
-  List<SectionModel> section = [];
   TextEditingController titleController = TextEditingController();
   TextEditingController colorController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
+  List<SectionModel> section = [];
+
   bool disable = true;
   final key = GlobalKey<FormState>();
   Color currentColor = Colors.green;
-  int number = 0;
 
   @override
   void initState() {
@@ -68,24 +65,10 @@ class _SectionFormWidgetState extends State<SectionFormWidget> {
               const SizedBox(
                 height: 16,
               ),
-              Align(
-                alignment: Alignment.centerRight,
-                child: CustomElevatedButton(
-                    label: 'add',
-                    onPressed: () {
-                      setState(() {
-                        number++;
-                      });
-                      context.read<SectionBloc>().addSection(SectionModel(
-                          number: number,
-                          title: titleController.text,
-                          description: descriptionController.text,
-                          color: Colors.grey));
-                    },
-                    buttonSize: ButtonSize.small,
-                    isExpanded: false,
-                    disabled: disable),
-              ),
+              AddSectionButtonWidget(
+                  title: titleController.text,
+                  description: descriptionController.text,
+                  disable: disable),
               const SizedBox(
                 height: 16,
               ),
