@@ -4,6 +4,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_project/core/utils/architecture/presentation/error_handler.dart';
 import 'package:team_project/core/utils/assets/app_svg.dart';
 import 'package:team_project/core/utils/constants/theme/colors.dart';
+import 'package:team_project/core/utils/routes/router.gr.dart';
 import 'package:team_project/features/feature_splash/presentation/bloc/splash_bloc.dart';
 import 'package:team_project/features/feature_splash/presentation/bloc/splash_state.dart';
 
@@ -72,6 +73,7 @@ class _SplashPageState extends State<SplashPage> {
   void _handleState(SplashState state) {
     if (state is UserInfoLoaded) {
       print("Its Ok");
+      context.router.replace(const MedicineRoute());
       //context.router.replace(const HomeRoute());
     }else if(state is SplashError){
       ErrorHandler.handle(context, state.e);
