@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'medicine_source.dart';
+part of 'medicine_service.dart';
 
 // **************************************************************************
 // RetrofitGenerator
@@ -8,7 +8,7 @@ part of 'medicine_source.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
 
-class _MedicineSource implements MedicineSource {
+class _MedicineSource implements MedicineService {
   _MedicineSource(
     this._dio, {
     this.baseUrl,
@@ -21,13 +21,13 @@ class _MedicineSource implements MedicineSource {
   String? baseUrl;
 
   @override
-  Future<ApiResponse<MedicineModel>> getMedicine() async {
+  Future<ApiResponse<MedicineRequest>> getMedicine() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiResponse<MedicineModel>>(Options(
+        _setStreamType<ApiResponse<MedicineRequest>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -39,9 +39,9 @@ class _MedicineSource implements MedicineSource {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiResponse<MedicineModel>.fromJson(
+    final value = ApiResponse<MedicineRequest>.fromJson(
       _result.data!,
-      (json) => MedicineModel.fromJson(json as Map<String, dynamic>),
+      (json) => MedicineRequest.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

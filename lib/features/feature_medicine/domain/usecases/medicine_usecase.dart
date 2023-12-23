@@ -4,10 +4,10 @@ import 'package:team_project/core/utils/architecture/domain/use_case.dart';
 import 'package:team_project/features/feature_medicine/data/models/medicine_model.dart';
 import 'package:team_project/features/feature_medicine/data/repository/medicine_repository.dart';
 
-class MedicineUseCase implements UseCase<DataState<MedicineModel>,NoParams>{
+class GetMedicinesUseCase implements UseCase<DataState<MedicineRequest>,NoParams>{
   final MedicineRepository medicineRepository=getIt.get<MedicineRepository>();
   @override
-  Future<DataState<MedicineModel>> call(NoParams param)async {
+  Future<DataState<MedicineRequest>> call(NoParams param)async {
     return await medicineRepository.getMedicine();
   }
 }

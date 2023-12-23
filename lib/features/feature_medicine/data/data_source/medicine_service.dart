@@ -7,8 +7,8 @@ import 'package:team_project/features/feature_medicine/data/models/medicine_mode
 
 part 'medicine_source.g.dart';
 @RestApi(baseUrl: baseUrl)
-abstract class MedicineSource{
-  factory MedicineSource(Dio dio,{String baseUrl})=_MedicineSource;
+abstract class MedicineService{
+  factory MedicineService(Dio dio,{String baseUrl})=_MedicineSource;
   @GET('medicines')
-  Future<ApiResponse<MedicineModel>>getMedicine();
+  Future<ApiResponse<MedicineRequest>>getMedicine();
 }

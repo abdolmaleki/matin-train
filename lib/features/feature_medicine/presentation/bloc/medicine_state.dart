@@ -9,7 +9,7 @@ class MedicineInitial extends MedicineState {}
 class MedicineLoading extends MedicineState {}
 
 class MedicineLoaded extends MedicineState {
- final MedicineModel medicineModel;
+ final MedicineRequest medicineModel;
 
  MedicineLoaded(this.medicineModel);
 }

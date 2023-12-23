@@ -6,7 +6,7 @@ import 'package:team_project/features/feature_medicine/domain/usecases/medicine_
 import 'package:team_project/features/feature_medicine/presentation/bloc/medicine_state.dart';
 
 class MedicineBloc extends Cubit<MedicineState>{
-  final MedicineUseCase medicineUseCase = MedicineUseCase();
+  final GetMedicinesUseCase medicineUseCase = GetMedicinesUseCase();
   MedicineBloc():super(MedicineInitial());
 
   void medicineLoaded()async{
