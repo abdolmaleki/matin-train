@@ -1,4 +1,4 @@
-class MedicineRequest {
+class MedicineResponse {
   List<Items>? items;
   int? limit;
   int? offset;
@@ -6,7 +6,7 @@ class MedicineRequest {
   int? totalPages;
   int? totalRows;
 
-  MedicineRequest(
+  MedicineResponse(
       {this.items,
         this.limit,
         this.offset,
@@ -14,7 +14,7 @@ class MedicineRequest {
         this.totalPages,
         this.totalRows});
 
-  MedicineRequest.fromJson(Map<String, dynamic> json) {
+  MedicineResponse.fromJson(Map<String, dynamic> json) {
     if (json['items'] != null) {
       items = <Items>[];
       json['items'].forEach((v) {

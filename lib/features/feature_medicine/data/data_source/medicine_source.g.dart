@@ -21,13 +21,13 @@ class _MedicineSource implements MedicineService {
   String? baseUrl;
 
   @override
-  Future<ApiResponse<MedicineRequest>> getMedicine() async {
+  Future<ApiResponse<MedicineResponse>> getMedicine() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiResponse<MedicineRequest>>(Options(
+        _setStreamType<ApiResponse<MedicineResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -39,9 +39,9 @@ class _MedicineSource implements MedicineService {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiResponse<MedicineRequest>.fromJson(
+    final value = ApiResponse<MedicineResponse>.fromJson(
       _result.data!,
-      (json) => MedicineRequest.fromJson(json as Map<String, dynamic>),
+      (json) => MedicineResponse.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }
