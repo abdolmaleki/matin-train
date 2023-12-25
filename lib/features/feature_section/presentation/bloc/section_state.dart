@@ -1,12 +1,29 @@
 
-import 'package:team_project/core/utils/architecture/data/common_models/section.dart';
+import 'package:dio/dio.dart';
+import 'package:team_project/features/feature_section/data/model/create_section_response.dart';
+import 'package:team_project/features/feature_section/data/model/delete_section_response.dart';
+import 'package:team_project/features/feature_section/data/model/get_section_response.dart';
+import 'package:team_project/features/feature_section/domain/usecases/delete_section_usecase.dart';
 
 abstract class SectionState{}
 class InitState extends SectionState{}
 class SectionLoaded extends SectionState{
- final List<SectionModel>section;
+final GetSectionResponse sectionResponse;
 
-  SectionLoaded({required this.section});
+SectionLoaded(this.sectionResponse);
 }
-class SectionAdded extends SectionState{}
-class SectionRemoved extends SectionState{}
+class SectionError extends SectionState{
+ DioException error;
+
+ SectionError(this.error);
+}
+class SectionAdded extends SectionState{
+ final CreateSectionResponse createSectionResponse;
+
+ SectionAdded(this.createSectionResponse);
+}
+class SectionRemoved extends SectionState{
+ final DeleteSectionRespnse deleteSectionRespnse;
+
+ SectionRemoved(this.deleteSectionRespnse);
+}

@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:team_project/core/utils/architecture/data/common_models/section.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:team_project/core/utils/assets/app_svg.dart';
 import 'package:team_project/core/utils/components/containers/shadowed_container.dart';
 import 'package:team_project/core/utils/constants/theme/colors.dart';
+
+
 import 'package:team_project/features/feature_section/presentation/bloc/section_bloc.dart';
 import 'package:team_project/features/feature_section/presentation/bloc/section_state.dart';
-import 'package:team_project/features/feature_section/presentation/widgets/delete_inkwell.dart';
+
+import '../../../data/model/create_section_response.dart';
+import '../../../data/model/get_section_response.dart';
+import '../delete_inkwell.dart';
+
 
 class SectionRowWidget extends StatefulWidget {
   const SectionRowWidget({super.key});
@@ -16,15 +22,11 @@ class SectionRowWidget extends StatefulWidget {
 }
 
 class _SectionRowWidgetState extends State<SectionRowWidget> {
-  List<SectionModel> section = [];
+  List<Items> getSection = [];
+  // List<Children>createSection=[];
 
 
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-    context.read<SectionBloc>().loadSection();
-  }
+
 
   @override
   Widget build(BuildContext context) {
@@ -32,12 +34,12 @@ class _SectionRowWidgetState extends State<SectionRowWidget> {
     return BlocConsumer<SectionBloc, SectionState>(listener: (context, state) {
       if (state is SectionLoaded) {
         setState(() {
-          section = state.section;
+          getSection = state.sectionResponse.items!;
         });
-        if (state is SectionAdded) {
-          context.read<SectionBloc>().loadSection();
-        }
+      } if(state is SectionAdded){
+        context.read<SectionBloc>().loadSection();
       }
+
     }, builder: (context, state) {
       return ListView.builder(
           itemBuilder: (context, index) {
@@ -60,7 +62,8 @@ class _SectionRowWidgetState extends State<SectionRowWidget> {
                                 color: Color(0xffC4CDD5)),
                             child: Center(
                                 child: Text(
-                              section[index].number.toString(),
+                              // createSection[index].id.toString(),
+                                  getSection[index].id.toString()!,
                               style: theme.textTheme.titleSmall,
                             )),
                           ),
@@ -73,7 +76,7 @@ class _SectionRowWidgetState extends State<SectionRowWidget> {
                               const SizedBox(
                                 width: 5,
                               ),
-                              DeleteInkWellWidget(section: section[index])
+                              const DeleteInkWellWidget()
                             ],
                           )
                         ],
@@ -89,7 +92,8 @@ class _SectionRowWidgetState extends State<SectionRowWidget> {
                             style: theme.textTheme.bodyMedium,
                           ),
                           Text(
-                            section[index].title,
+                            // createSection[index].name!,
+                            getSection[index].name!,
                             style: theme.textTheme.bodyMedium,
                           ),
                         ],
@@ -108,7 +112,7 @@ class _SectionRowWidgetState extends State<SectionRowWidget> {
                             width: 18,
                             height: 18,
                             decoration: BoxDecoration(
-                                color: Colors.red,
+                                color: HexColor(getSection[index].color!),
                                 borderRadius: BorderRadius.circular(3)),
                           )
                         ],
@@ -125,7 +129,8 @@ class _SectionRowWidgetState extends State<SectionRowWidget> {
                         ],
                       ),
                       Text(
-                        section[index].description,
+                        // createSection[index].description!,
+                        getSection[index].description!,
                         style: theme.textTheme.bodyMedium
                             ?.apply(color: AppColors.primaryLight),
                       ),
@@ -135,7 +140,7 @@ class _SectionRowWidgetState extends State<SectionRowWidget> {
               ),
             );
           },
-          itemCount: section.length);
+          itemCount: getSection.length);
     });
   }
 }

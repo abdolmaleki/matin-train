@@ -6,6 +6,8 @@ import 'package:team_project/core/utils/architecture/data/common_models/user.dar
 import 'package:team_project/core/utils/remote/dio_client.dart';
 import 'package:team_project/features/feature_auth/data/data_source/auth_service.dart';
 import 'package:team_project/features/feature_auth/data/repository/repository.dart';
+import 'package:team_project/features/feature_section/data/data_source/section_service.dart';
+import 'package:team_project/features/feature_section/data/repository/section_repository.dart';
 import 'package:team_project/features/feature_splash/data/data_source/splash_service.dart';
 import 'package:team_project/features/feature_splash/data/repository/repository.dart';
 
@@ -24,7 +26,9 @@ Future initLocator() async {
   getIt.registerLazySingleton(() => SplashService(getIt.get<Dio>()));
   getIt.registerLazySingleton(() => SplashRepository());
   getIt.registerLazySingleton(() => AuthService(getIt.get<Dio>()));
+  getIt.registerLazySingleton(() => SectionService(getIt.get<Dio>()));
   getIt.registerLazySingleton(() => AuthRepository());
+  getIt.registerLazySingleton(() => SectionRepository());
 
 
   return;

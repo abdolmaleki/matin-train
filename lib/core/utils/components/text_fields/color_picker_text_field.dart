@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_colorpicker/flutter_colorpicker.dart';
+import 'package:hexcolor/hexcolor.dart';
 import 'package:team_project/core/utils/components/text_fields/enum.dart';
 import 'package:team_project/core/utils/components/text_fields/normal_text_field.dart';
 
@@ -31,7 +32,7 @@ class CustomColorPickerTextField extends StatefulWidget {
 
 class _CustomDatePickerTextFieldState extends State<CustomColorPickerTextField> {
   final FocusNode _focusNode = FocusNode();
-  Color _currentColor = const Color(0xff2196f3);
+  Color _currentColor =  HexColor("#2196f3");
   @override
   Widget build(BuildContext context) {
     return CustomTextFormField(

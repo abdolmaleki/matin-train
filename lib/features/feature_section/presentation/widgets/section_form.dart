@@ -15,14 +15,14 @@ class SectionFormWidget extends StatefulWidget {
 }
 
 class _SectionFormWidgetState extends State<SectionFormWidget> {
+  Color currentColor = Colors.green;
   TextEditingController titleController = TextEditingController();
   TextEditingController colorController = TextEditingController();
   TextEditingController descriptionController = TextEditingController();
-  List<SectionModel> section = [];
 
   bool disable = true;
   final key = GlobalKey<FormState>();
-  Color currentColor = Colors.green;
+
 
   @override
   void initState() {
@@ -66,7 +66,8 @@ class _SectionFormWidgetState extends State<SectionFormWidget> {
                 height: 16,
               ),
               AddSectionButtonWidget(
-                  title: titleController.text,
+                color: colorController.text,
+                  name: titleController.text,
                   description: descriptionController.text,
                   disable: disable),
               const SizedBox(

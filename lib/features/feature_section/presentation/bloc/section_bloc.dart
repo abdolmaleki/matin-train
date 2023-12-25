@@ -1,23 +1,49 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:team_project/core/utils/architecture/data/common_models/section.dart';
-import 'package:team_project/core/utils/assets/mocks/mock_types/section.dart';
+import 'package:team_project/core/utils/architecture/data/data_state.dart';
+import 'package:team_project/features/feature_section/data/model/create_section_request.dart';
+import 'package:team_project/features/feature_section/data/model/delete_section_request.dart';
+import 'package:team_project/features/feature_section/domain/usecases/create_section_usecase.dart';
+import 'package:team_project/features/feature_section/domain/usecases/delete_section_usecase.dart';
 import 'package:team_project/features/feature_section/presentation/bloc/section_state.dart';
 
-class SectionBloc extends Cubit<SectionState>{
-  final List<SectionModel>_sections = MockSectionList().getMockObject();
-  SectionBloc():super(InitState());
+import '../../../../core/utils/architecture/domain/use_case.dart';
+import '../../domain/usecases/get_section_usecase.dart';
 
-  void loadSection(){
-    Future.delayed(const Duration(seconds: 1), () {
-      emit(SectionLoaded( section: _sections));
-    });
+class SectionBloc extends Cubit<SectionState> {
+  final GetSectionUseCase getSectionUseCase = GetSectionUseCase();
+  final CreateSectionUseCase createSectionUseCase = CreateSectionUseCase();
+  final DeleteSectionUseCase deleteSectionUseCase = DeleteSectionUseCase();
+
+  SectionBloc() : super(InitState());
+
+  Future<void> loadSection() async {
+    final result = await getSectionUseCase(NoParams());
+    if (result is DataSuccess) {
+      emit(SectionLoaded(result.data!));
+    } else {
+      emit(SectionError(result.error!));
+    }
   }
-  void addSection(SectionModel model){
-    _sections.add(model);
-    emit(SectionAdded());
+
+  void addSection(CreateSectionRequest request) async {
+    final result = await createSectionUseCase(request);
+    if (result is DataSuccess) {
+      emit(SectionAdded(result.data!));
+    } else {
+      emit(SectionError(result.error!));
+    }
   }
-  void removeSection(SectionModel model){
-    _sections.remove(model);
-    emit(SectionRemoved());
+
+// void removeSection(Items model){
+//   _sections?.remove(model);
+//   emit(SectionRemoved());
+// }
+  void deleteSection(DeleteSectionRequest request) async {
+    final result = await deleteSectionUseCase(request);
+    if (result is DataSuccess) {
+      emit(SectionRemoved(result.data!));
+    } else {
+      emit(SectionError(result.error!));
+    }
   }
 }

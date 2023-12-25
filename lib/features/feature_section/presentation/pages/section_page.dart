@@ -15,28 +15,31 @@ class SectionPage extends StatefulWidget {
 }
 
 class _SectionPageState extends State<SectionPage> {
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+    context.read<SectionBloc>().loadSection();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: BlocProvider(
-        create: (context)=>SectionBloc(),
-        child: Container(
-          margin: const EdgeInsets.symmetric(horizontal: 16),
-          child:  const Column(
-            children: [
-              SizedBox(
-                height: 16,
-              ),
-              CustomTitledDivider('Create Section'),
-              SizedBox(
-                height: 16,
-              ),
-              SectionFormWidget(),
-              SizedBox(height: 16,),
-              Expanded(child: SectionRowWidget()),
-            ],
-          ),
+      body: Container(
+        margin: const EdgeInsets.symmetric(horizontal: 16),
+        child:  const Column(
+          children: [
+            SizedBox(
+              height: 16,
+            ),
+            CustomTitledDivider('Create Section'),
+            SizedBox(
+              height: 16,
+            ),
+            SectionFormWidget(),
+            SizedBox(height: 16,),
+            Expanded(child: SectionRowWidget()),
+          ],
         ),
       ),
     );

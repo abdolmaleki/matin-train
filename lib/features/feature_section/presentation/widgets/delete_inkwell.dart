@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_project/core/utils/architecture/data/common_models/section.dart';
+import 'package:team_project/features/feature_section/data/model/delete_section_request.dart';
+import 'package:team_project/features/feature_section/data/model/get_section_response.dart';
 
 import '../../../../core/utils/assets/app_svg.dart';
 import '../../../../core/utils/components/buttons/elevated_button.dart';
@@ -8,8 +10,7 @@ import '../../../../core/utils/components/buttons/enums/button_size.dart';
 import '../bloc/section_bloc.dart';
 
 class DeleteInkWellWidget extends StatelessWidget {
-   const DeleteInkWellWidget({super.key,required this.section});
-  final SectionModel section;
+   const DeleteInkWellWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +63,9 @@ class DeleteInkWellWidget extends StatelessWidget {
                         child: Row(
                           children: [
                             Expanded(child: CustomElevatedButton(onPressed: (){
-                              context.read<SectionBloc>().removeSection(section);
+                              context.read<SectionBloc>().deleteSection(DeleteSectionRequest(
+                                //list<int>id
+                              ));
                               Navigator.of(context).pop();
                             }, label: 'Confirm', buttonSize: ButtonSize.medium,)),
                             const SizedBox(width:16 ,),
