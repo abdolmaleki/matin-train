@@ -15,6 +15,8 @@ import 'package:team_project/features/feature_auth/presentation/bloc/auth_bloc.d
 import 'package:team_project/features/feature_auth/presentation/bloc/auth_state.dart';
 import 'package:team_project/features/feature_auth/presentation/widgets/resend_code_timer.dart';
 
+import '../../../feature_section/presentation/widgets/tabbar.dart';
+
 @RoutePage()
 class OtpPage extends StatefulWidget {
   const OtpPage(
@@ -188,8 +190,9 @@ class _OtpPageState extends State<OtpPage> {
     if (state.auth.oauth2!.user!.privacyPolicyAcceptedAt == null) {
       context.router.replace(const TermsPrivacyRoute());
     } else {
-      context.router.replace(const SectionRoute());
      //Todo by Matin
+      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>TabBarWidget()));
+
     }
   }
 

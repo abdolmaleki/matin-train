@@ -21,6 +21,8 @@ import 'package:team_project/features/feature_auth/presentation/widgets/language
 import 'package:team_project/features/feature_auth/presentation/widgets/or_divider.dart';
 import 'package:team_project/features/feature_root/presentation/bloc/root_bloc.dart';
 
+import '../../../feature_section/presentation/widgets/tabbar.dart';
+
 @RoutePage()
 class LoginPage extends StatefulWidget {
   const LoginPage({Key? key}) : super(key: key);
@@ -244,7 +246,8 @@ class _LoginPageState extends State<LoginPage> {
     if (state.auth.oauth2!.user!.privacyPolicyAcceptedAt == null) {
       context.router.replace(const TermsPrivacyRoute());
     } else {
-      context.router.replace( const SectionRoute());
+      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>TabBarWidget()));
+
       //Todo by Matin
     }
   }
