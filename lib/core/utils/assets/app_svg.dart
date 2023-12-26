@@ -506,5 +506,10 @@ class AppIcon {
   static final Widget coin = SvgPicture.asset(
     "${_baseDirectory}ic_coin.svg",
   );
-
+  static final Widget more = SvgPicture.asset(
+    "${_baseDirectory}ic_more.svg",
+  );
+  static final Widget removeUser = SvgPicture.asset(
+    "${_baseDirectory}ic_user_remove.svg"
+  );
 }

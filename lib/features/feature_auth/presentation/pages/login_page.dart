@@ -243,6 +243,7 @@ class _LoginPageState extends State<LoginPage> {
     if (state.auth.oauth2!.user!.privacyPolicyAcceptedAt == null) {
       context.router.replace(const TermsPrivacyRoute());
     }  else {
+      context.router.replace(const CustomerRoute());
       //Todo by Matin
     }
   }
