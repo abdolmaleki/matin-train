@@ -5,7 +5,6 @@ import 'package:team_project/core/utils/architecture/presentation/error_handler.
 import 'package:team_project/core/utils/assets/app_svg.dart';
 import 'package:team_project/core/utils/constants/theme/colors.dart';
 import 'package:team_project/core/utils/routes/router.gr.dart';
-
 import '../bloc/splash_bloc.dart';
 import '../bloc/splash_state.dart';
 
@@ -75,7 +74,6 @@ class _SplashPageState extends State<SplashPage> {
   void _handleState(SplashState state) {
     if (state is UserInfoLoaded) {
       print("Its Ok");
-
       context.router.replace(const LoginRoute());
     }else if(state is SplashError){
       ErrorHandler.handle(context, state.e);

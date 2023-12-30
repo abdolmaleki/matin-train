@@ -28,15 +28,17 @@ class SectionRepository {
       final result = await sectionService.createSection(request);
       return DataSuccess(result.data!);
     } on DioException catch (e) {
+      print(e);
       return DataError(e);
     }
   }
 
-  Future<DataState<DeleteSectionRespnse>> deleteSection(DeleteSectionRequest request) async {
-    try{
+  Future<DataState<DeleteSectionRespnse>> deleteSection(
+      DeleteSectionRequest request) async {
+    try {
       final result = await sectionService.deleteSection(request);
       return DataSuccess(result.data!);
-    }on DioException catch(e){
+    } on DioException catch (e) {
       return DataError(e);
     }
   }

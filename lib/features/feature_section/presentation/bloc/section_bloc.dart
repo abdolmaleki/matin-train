@@ -32,6 +32,7 @@ class SectionBloc extends Cubit<SectionState> {
     } else {
       emit(SectionError(result.error!));
     }
+    print(result);
   }
 
 // void removeSection(Items model){

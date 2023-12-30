@@ -1,10 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:team_project/core/utils/architecture/data/common_models/section.dart';
 import 'package:team_project/features/feature_section/data/model/create_section_request.dart';
-import 'package:team_project/features/feature_section/data/model/get_section_response.dart';
-import 'package:team_project/features/feature_section/presentation/widgets/section_form.dart';
-
 import '../../../../core/utils/components/buttons/elevated_button.dart';
 import '../../../../core/utils/components/buttons/enums/button_size.dart';
 import '../bloc/section_bloc.dart';
@@ -13,7 +9,8 @@ class AddSectionButtonWidget extends StatefulWidget {
   String name;
   String description;
   bool disable;
-  String color;
+  int parentId = 1;
+  String color = '#000000';
 
   AddSectionButtonWidget(
       {super.key,
@@ -38,10 +35,10 @@ class _AddSectionButtonWidgetState extends State<AddSectionButtonWidget> {
           label: 'Add',
           onPressed: () {
             context.read<SectionBloc>().addSection(CreateSectionRequest(
-                color: "#000000",
+                color: widget.color,
                 name: widget.name,
                 description: widget.description,
-                parentId: null));
+                parentId: 1));
           },
           buttonSize: ButtonSize.small,
           isExpanded: false,

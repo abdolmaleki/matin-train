@@ -191,8 +191,7 @@ class _OtpPageState extends State<OtpPage> {
       context.router.replace(const TermsPrivacyRoute());
     } else {
      //Todo by Matin
-      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>TabBarWidget()));
-
+      context.router.replace(const DashBoardRoute());
     }
   }
 

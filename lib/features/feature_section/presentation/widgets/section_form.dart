@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:team_project/core/utils/architecture/data/common_models/section.dart';
 import 'package:team_project/core/utils/components/divider/titled_divider.dart';
 import 'package:team_project/core/utils/components/form/form.dart';
 import 'package:team_project/core/utils/components/text_fields/color_picker_text_field.dart';

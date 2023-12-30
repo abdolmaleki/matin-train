@@ -5,7 +5,6 @@ import 'package:team_project/core/utils/architecture/presentation/error_handler.
 import 'package:team_project/core/utils/assets/app_svg.dart';
 import 'package:team_project/core/utils/components/buttons/enums/button_size.dart';
 import 'package:team_project/core/utils/components/buttons/elevated_button.dart';
-import 'package:team_project/core/utils/components/divider/titled_divider.dart';
 import 'package:team_project/core/utils/components/form/form.dart';
 import 'package:team_project/core/utils/components/text_fields/enum.dart';
 import 'package:team_project/core/utils/components/text_fields/normal_text_field.dart';
@@ -20,8 +19,6 @@ import 'package:team_project/features/feature_auth/presentation/bloc/auth_state.
 import 'package:team_project/features/feature_auth/presentation/widgets/language_dropdown.dart';
 import 'package:team_project/features/feature_auth/presentation/widgets/or_divider.dart';
 import 'package:team_project/features/feature_root/presentation/bloc/root_bloc.dart';
-
-import '../../../feature_section/presentation/widgets/tabbar.dart';
 
 @RoutePage()
 class LoginPage extends StatefulWidget {
@@ -246,9 +243,7 @@ class _LoginPageState extends State<LoginPage> {
     if (state.auth.oauth2!.user!.privacyPolicyAcceptedAt == null) {
       context.router.replace(const TermsPrivacyRoute());
     } else {
-      Navigator.of(context).push(MaterialPageRoute(builder: (context)=>TabBarWidget()));
-
-      //Todo by Matin
+      context.router.replace(const DashBoardRoute());
     }
   }
 }

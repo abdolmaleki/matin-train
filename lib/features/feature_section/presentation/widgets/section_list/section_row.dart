@@ -22,7 +22,7 @@ class SectionRowWidget extends StatefulWidget {
 }
 
 class _SectionRowWidgetState extends State<SectionRowWidget> {
-  List<Items> getSection = [];
+  List<Items> _getSection = [];
   // List<Children>createSection=[];
 
 
@@ -34,7 +34,7 @@ class _SectionRowWidgetState extends State<SectionRowWidget> {
     return BlocConsumer<SectionBloc, SectionState>(listener: (context, state) {
       if (state is SectionLoaded) {
         setState(() {
-          getSection = state.sectionResponse.items!;
+          _getSection = state.sectionResponse.items!;
         });
       } if(state is SectionAdded){
         context.read<SectionBloc>().loadSection();
@@ -63,7 +63,7 @@ class _SectionRowWidgetState extends State<SectionRowWidget> {
                             child: Center(
                                 child: Text(
                               // createSection[index].id.toString(),
-                                  getSection[index].id.toString()!,
+                                  _getSection[index].id.toString()!,
                               style: theme.textTheme.titleSmall,
                             )),
                           ),
@@ -93,7 +93,7 @@ class _SectionRowWidgetState extends State<SectionRowWidget> {
                           ),
                           Text(
                             // createSection[index].name!,
-                            getSection[index].name!,
+                            _getSection[index].name!,
                             style: theme.textTheme.bodyMedium,
                           ),
                         ],
@@ -112,7 +112,7 @@ class _SectionRowWidgetState extends State<SectionRowWidget> {
                             width: 18,
                             height: 18,
                             decoration: BoxDecoration(
-                                color: HexColor(getSection[index].color!),
+                                color: HexColor(_getSection[index].color!),
                                 borderRadius: BorderRadius.circular(3)),
                           )
                         ],
@@ -130,7 +130,7 @@ class _SectionRowWidgetState extends State<SectionRowWidget> {
                       ),
                       Text(
                         // createSection[index].description!,
-                        getSection[index].description!,
+                        "${_getSection[index].description}",
                         style: theme.textTheme.bodyMedium
                             ?.apply(color: AppColors.primaryLight),
                       ),
@@ -140,7 +140,7 @@ class _SectionRowWidgetState extends State<SectionRowWidget> {
               ),
             );
           },
-          itemCount: getSection.length);
+          itemCount: _getSection.length);
     });
   }
 }

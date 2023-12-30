@@ -8,8 +8,8 @@ part of 'medicine_service.dart';
 
 // ignore_for_file: unnecessary_brace_in_string_interps,no_leading_underscores_for_local_identifiers
 
-class _MedicineSource implements MedicineService {
-  _MedicineSource(
+class _MedicineService implements MedicineService {
+  _MedicineService(
     this._dio, {
     this.baseUrl,
   }) {
@@ -21,13 +21,13 @@ class _MedicineSource implements MedicineService {
   String? baseUrl;
 
   @override
-  Future<ApiResponse<MedicineResponse>> getMedicine() async {
+  Future<ApiResponse<GetMedicineResponse>> getMedicine() async {
     const _extra = <String, dynamic>{};
     final queryParameters = <String, dynamic>{};
     final _headers = <String, dynamic>{};
     final Map<String, dynamic>? _data = null;
     final _result = await _dio.fetch<Map<String, dynamic>>(
-        _setStreamType<ApiResponse<MedicineResponse>>(Options(
+        _setStreamType<ApiResponse<GetMedicineResponse>>(Options(
       method: 'GET',
       headers: _headers,
       extra: _extra,
@@ -39,9 +39,36 @@ class _MedicineSource implements MedicineService {
               data: _data,
             )
             .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
-    final value = ApiResponse<MedicineResponse>.fromJson(
+    final value = ApiResponse<GetMedicineResponse>.fromJson(
       _result.data!,
-      (json) => MedicineResponse.fromJson(json as Map<String, dynamic>),
+      (json) => GetMedicineResponse.fromJson(json as Map<String, dynamic>),
+    );
+    return value;
+  }
+
+  @override
+  Future<ApiResponse<CreateMedicineResponse>> createMedicine(request) async {
+    const _extra = <String, dynamic>{};
+    final queryParameters = <String, dynamic>{};
+    final _headers = <String, dynamic>{};
+    final _data = <String, dynamic>{};
+    _data.addAll(request.toJson());
+    final _result = await _dio.fetch<Map<String, dynamic>>(
+        _setStreamType<ApiResponse<CreateMedicineResponse>>(Options(
+      method: 'POST',
+      headers: _headers,
+      extra: _extra,
+    )
+            .compose(
+              _dio.options,
+              'medicines',
+              queryParameters: queryParameters,
+              data: _data,
+            )
+            .copyWith(baseUrl: baseUrl ?? _dio.options.baseUrl)));
+    final value = ApiResponse<CreateMedicineResponse>.fromJson(
+      _result.data!,
+      (json) => CreateMedicineResponse.fromJson(json as Map<String, dynamic>),
     );
     return value;
   }

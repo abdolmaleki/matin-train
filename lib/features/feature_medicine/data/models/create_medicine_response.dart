@@ -1,48 +1,4 @@
-class MedicineResponse {
-  List<Items>? items;
-  int? limit;
-  int? offset;
-  int? page;
-  int? totalPages;
-  int? totalRows;
-
-  MedicineResponse(
-      {this.items,
-        this.limit,
-        this.offset,
-        this.page,
-        this.totalPages,
-        this.totalRows});
-
-  MedicineResponse.fromJson(Map<String, dynamic> json) {
-    if (json['items'] != null) {
-      items = <Items>[];
-      json['items'].forEach((v) {
-        items!.add(new Items.fromJson(v));
-      });
-    }
-    limit = json['limit'];
-    offset = json['offset'];
-    page = json['page'];
-    totalPages = json['totalPages'];
-    totalRows = json['totalRows'];
-  }
-
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = new Map<String, dynamic>();
-    if (this.items != null) {
-      data['items'] = this.items!.map((v) => v.toJson()).toList();
-    }
-    data['limit'] = this.limit;
-    data['offset'] = this.offset;
-    data['page'] = this.page;
-    data['totalPages'] = this.totalPages;
-    data['totalRows'] = this.totalRows;
-    return data;
-  }
-}
-
-class Items {
+class CreateMedicineResponse {
   String? availability;
   String? code;
   String? conditions;
@@ -54,7 +10,7 @@ class Items {
   String? purposeOfUse;
   String? sideEffects;
 
-  Items(
+  CreateMedicineResponse(
       {this.availability,
         this.code,
         this.conditions,
@@ -66,7 +22,7 @@ class Items {
         this.purposeOfUse,
         this.sideEffects});
 
-  Items.fromJson(Map<String, dynamic> json) {
+  CreateMedicineResponse.fromJson(Map<String, dynamic> json) {
     availability = json['availability'];
     code = json['code'];
     conditions = json['conditions'];

@@ -2,7 +2,7 @@ import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:team_project/core/utils/components/containers/shadowed_container.dart';
-import 'package:team_project/features/feature_medicine/data/models/medicine_response.dart';
+import 'package:team_project/features/feature_medicine/data/models/get_medicine_response.dart';
 import 'package:team_project/features/feature_medicine/presentation/bloc/medicine_bloc.dart';
 import 'package:team_project/features/feature_medicine/presentation/bloc/medicine_state.dart';
 import 'package:team_project/features/feature_medicine/presentation/widgets/medicine_list.dart';
@@ -29,6 +29,8 @@ class _MedicinePageState extends State<MedicinePage> {
             setState(() {
               items = state.medicineModel.items!;
             });
+          }if(state is MedicineAdded){
+            context.read<MedicineLoaded>();
           }
         }, builder: (context, state) {
           if (state is MedicineLoading) {
