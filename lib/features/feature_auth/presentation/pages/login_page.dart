@@ -244,6 +244,7 @@ class _LoginPageState extends State<LoginPage> {
       context.router.replace(const TermsPrivacyRoute());
     }  else {
       //Todo by Matin
+      context.router.replace(const TimerRoute());
     }
   }
 }

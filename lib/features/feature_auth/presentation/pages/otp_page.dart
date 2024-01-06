@@ -189,6 +189,7 @@ class _OtpPageState extends State<OtpPage> {
       context.router.replace(const TermsPrivacyRoute());
     } else {
      //Todo by Matin
+      context.router.replace(const TimerRoute());
     }
   }
 
