@@ -188,6 +188,7 @@ class _OtpPageState extends State<OtpPage> {
     if (state.auth.oauth2!.user!.privacyPolicyAcceptedAt == null) {
       context.router.replace(const TermsPrivacyRoute());
     } else {
+      context.router.replace(PermissionRoute());
      //Todo by Matin
     }
   }
