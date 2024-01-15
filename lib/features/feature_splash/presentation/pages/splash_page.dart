@@ -7,6 +7,8 @@ import 'package:team_project/core/utils/constants/theme/colors.dart';
 import 'package:team_project/features/feature_splash/presentation/bloc/splash_bloc.dart';
 import 'package:team_project/features/feature_splash/presentation/bloc/splash_state.dart';
 
+import '../../../../core/utils/routes/router.gr.dart';
+
 @RoutePage()
 class SplashPage extends StatefulWidget {
   const SplashPage({Key? key}) : super(key: key);
@@ -72,7 +74,7 @@ class _SplashPageState extends State<SplashPage> {
   void _handleState(SplashState state) {
     if (state is UserInfoLoaded) {
       print("Its Ok");
-      //context.router.replace(const HomeRoute());
+      context.router.replace(const PermissionsRoute());
     }else if(state is SplashError){
       ErrorHandler.handle(context, state.e);
     }
