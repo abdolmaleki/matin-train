@@ -1,5 +1,5 @@
-import 'package:hoivalani/core/utils/architecture/data/response/base_response.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:team_project/core/utils/architecture/data/response/base_response.dart';
 
 part 'api_response.g.dart';
 

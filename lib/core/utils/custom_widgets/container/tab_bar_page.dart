@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/utils/components/tabbar/fix_tabbar.dart';
-import 'package:hoivalani/core/utils/custom_widgets/text/page_title.dart';
+import 'package:team_project/core/utils/components/tabbar/fix_tabbar.dart';
+import 'package:team_project/core/utils/custom_widgets/text/page_title.dart';
 
 class CustomTabBarPage extends StatefulWidget {
   const CustomTabBarPage(

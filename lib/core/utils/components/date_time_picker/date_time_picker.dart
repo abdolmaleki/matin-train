@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/utils/components/date_time_picker/date_picker.dart';
-import 'package:hoivalani/core/utils/components/date_time_picker/timer_picker.dart';
+import 'package:team_project/core/utils/components/date_time_picker/date_picker.dart';
+import 'package:team_project/core/utils/components/date_time_picker/timer_picker.dart';
 
 Future<DateTime?> showCustomDateTimePicker(BuildContext context) async {
   final DateTime? selectedDate = await showCustomDatePicker(context);

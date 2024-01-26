@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/config/themes/typography.dart';
-import 'package:hoivalani/core/utils/components/buttons/enums/button_size.dart';
+import 'package:team_project/core/config/themes/typography.dart';
+import 'package:team_project/core/utils/components/buttons/enums/button_size.dart';
 
 class CustomTextButton extends StatelessWidget {
   const CustomTextButton(

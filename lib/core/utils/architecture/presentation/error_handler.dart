@@ -1,10 +1,10 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:dio/dio.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:hoivalani/core/utils/architecture/data/response/base_response.dart';
-import 'package:hoivalani/core/utils/components/notification/enums/toast_type.dart';
-import 'package:hoivalani/core/utils/components/notification/toast.dart';
-import 'package:hoivalani/core/utils/routes/router.gr.dart';
+import 'package:team_project/core/utils/architecture/data/response/base_response.dart';
+import 'package:team_project/core/utils/components/notification/enums/toast_type.dart';
+import 'package:team_project/core/utils/components/notification/toast.dart';
+import 'package:team_project/core/utils/routes/router.gr.dart';
 
 class ErrorHandler {
   static void handle(BuildContext context, Exception exception) {

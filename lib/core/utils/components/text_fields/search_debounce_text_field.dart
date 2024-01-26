@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/utils/components/containers/shadowed_container.dart';
-import 'package:hoivalani/core/utils/components/drop_down/drop_down_item.dart';
-import 'package:hoivalani/core/utils/components/drop_down/enum.dart';
-import 'package:hoivalani/core/utils/components/images/circle_avatar.dart';
-import 'package:hoivalani/core/utils/components/text_fields/debounce_text_field.dart';
-import 'package:hoivalani/core/utils/constants/theme/colors.dart';
+import 'package:team_project/core/utils/components/containers/shadowed_container.dart';
+import 'package:team_project/core/utils/components/drop_down/drop_down_item.dart';
+import 'package:team_project/core/utils/components/drop_down/enum.dart';
+import 'package:team_project/core/utils/components/images/circle_avatar.dart';
+import 'package:team_project/core/utils/components/text_fields/debounce_text_field.dart';
+import 'package:team_project/core/utils/constants/theme/colors.dart';
 
 class CustomSearchDebounceTextField extends StatefulWidget {
   const CustomSearchDebounceTextField(

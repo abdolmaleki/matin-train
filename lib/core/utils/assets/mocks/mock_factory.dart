@@ -1,35 +1,34 @@
-import 'package:hoivalani/core/utils/assets/mocks/enum.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/absence.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/address.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/attention.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/credit.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/customer.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/customer_report.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/customer_service.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/equipment.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/event.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/event_type.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/grace.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/holiday_wish.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/keikkala_shift.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/language_skill.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/license.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/limitation.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/medicine.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/mock_transportation_list.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/punishment.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/quiz.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/relative.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/report.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/reward.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/role_permission.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/shift.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/staff.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/staff_punishments.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/staff_rewards.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/ticket.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/todo.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_types/warning.dart';
+import 'package:team_project/core/utils/assets/mocks/enum.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/absence.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/address.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/attention.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/customer.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/customer_report.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/customer_service.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/equipment.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/event.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/event_type.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/grace.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/holiday_wish.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/keikkala_shift.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/language_skill.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/license.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/limitation.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/medicine.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/mock_transportation_list.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/punishment.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/quiz.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/relative.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/report.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/reward.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/role_permission.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/shift.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/staff.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/staff_punishments.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/staff_rewards.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/ticket.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/todo.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_types/warning.dart';
 
 abstract class MockData {
   factory MockData(MockType mockType) {
@@ -46,8 +45,6 @@ abstract class MockData {
         return MockAddress();
       case MockType.addressList:
         return MockAddressList();
-      case MockType.creditList:
-        return MockCustomerAdditionalInfo();
       case MockType.absenceList:
         return MockAbsenceList();
       case MockType.toDoList:

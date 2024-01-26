@@ -5,7 +5,6 @@ enum MockType{
   customer,
   address,
   addressList,
-  creditList,
   absenceList,
   toDoList,
   relativeList,

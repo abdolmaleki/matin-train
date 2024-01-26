@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/utils/constants/theme/colors.dart';
+import 'package:team_project/core/utils/constants/theme/colors.dart';
 
 class CustomFloatActionButton extends StatelessWidget {
   const CustomFloatActionButton(

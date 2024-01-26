@@ -2,10 +2,10 @@ import 'dart:async';
 
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/utils/assets/app_svg.dart';
-import 'package:hoivalani/core/utils/components/notification/enums/toast_type.dart';
-import 'package:hoivalani/core/utils/constants/keys/global_keys.dart';
-import 'package:hoivalani/core/utils/constants/theme/colors.dart';
+import 'package:team_project/core/utils/assets/app_svg.dart';
+import 'package:team_project/core/utils/components/notification/enums/toast_type.dart';
+import 'package:team_project/core/utils/constants/keys/global_keys.dart';
+import 'package:team_project/core/utils/constants/theme/colors.dart';
 
 class CustomToast {
   static void show(

@@ -1,16 +1,15 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/config/localizations/constants.dart';
-import 'package:hoivalani/core/utils/assets/app_svg.dart';
-import 'package:hoivalani/core/utils/components/buttons/elevated_button.dart';
-import 'package:hoivalani/core/utils/components/buttons/enums/button_color.dart';
-import 'package:hoivalani/core/utils/components/buttons/enums/button_size.dart';
-import 'package:hoivalani/core/utils/components/buttons/outlined_button.dart';
-import 'package:hoivalani/core/utils/components/page_view/expandable_page_view.dart';
-import 'package:hoivalani/core/utils/components/stepper/enum.dart';
-import 'package:hoivalani/core/utils/components/stepper/horizontal_stepper.dart';
-import 'package:hoivalani/core/utils/components/stepper/wizard_stepper_controller.dart';
-import 'package:hoivalani/core/utils/helper/platform_helper.dart';
+import 'package:team_project/core/utils/assets/app_svg.dart';
+import 'package:team_project/core/utils/components/buttons/elevated_button.dart';
+import 'package:team_project/core/utils/components/buttons/enums/button_color.dart';
+import 'package:team_project/core/utils/components/buttons/enums/button_size.dart';
+import 'package:team_project/core/utils/components/buttons/outlined_button.dart';
+import 'package:team_project/core/utils/components/page_view/expandable_page_view.dart';
+import 'package:team_project/core/utils/components/stepper/enum.dart';
+import 'package:team_project/core/utils/components/stepper/horizontal_stepper.dart';
+import 'package:team_project/core/utils/components/stepper/wizard_stepper_controller.dart';
+import 'package:team_project/core/utils/helper/platform_helper.dart';
 
 class CustomWizardStepper extends StatefulWidget {
   const CustomWizardStepper(
@@ -92,7 +91,7 @@ class _CustomWizardStepperState extends State<CustomWizardStepper> {
                                 Expanded(
                                   child: (index == 0)
                                       ? CustomOutlinedButton(
-                                          label: appIntl!.cancel,
+                                          label: "Cancel",
                                           onPressed: () {
                                             _handleLeftButtonClick(index);
                                           },
@@ -156,7 +155,7 @@ class _CustomWizardStepperState extends State<CustomWizardStepper> {
                             Expanded(
                               child: (index == 0)
                                   ? CustomOutlinedButton(
-                                      label: appIntl!.cancel,
+                                      label: "Cancel",
                                       onPressed: () {
                                         _handleLeftButtonClick(index);
                                       },

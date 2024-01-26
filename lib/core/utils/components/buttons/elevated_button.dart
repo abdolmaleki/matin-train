@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/config/themes/typography.dart';
-import 'package:hoivalani/core/utils/components/buttons/enums/button_color.dart';
-import 'package:hoivalani/core/utils/components/buttons/enums/button_size.dart';
-import 'package:hoivalani/core/utils/constants/theme/colors.dart';
+import 'package:team_project/core/config/themes/typography.dart';
+import 'package:team_project/core/utils/components/buttons/enums/button_color.dart';
+import 'package:team_project/core/utils/components/buttons/enums/button_size.dart';
+import 'package:team_project/core/utils/constants/theme/colors.dart';
 
 class CustomElevatedButton extends StatefulWidget {
   const CustomElevatedButton(

@@ -1,9 +1,9 @@
 import 'dart:convert';
 import 'package:faker/faker.dart';
-import 'package:hoivalani/core/config/dependency_injection/get_it.dart';
-import 'package:hoivalani/core/utils/architecture/data/common_models/staff.dart';
-import 'package:hoivalani/core/utils/architecture/domain/common_enums/staff_type.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_factory.dart';
+import 'package:team_project/core/config/dependency_injection/get_it.dart';
+import 'package:team_project/core/utils/architecture/data/common_models/staff.dart';
+import 'package:team_project/core/utils/architecture/domain/common_enums/staff_type.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_factory.dart';
 
 class MockStaffList implements MockData {
   String jsonData =

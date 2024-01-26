@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/features/feature_cycle/presentation/widgets/common/weekday_list/weekday_row.dart';
+import 'package:team_project/core/utils/custom_widgets/date_time/horizontal_calender/weekday_row.dart';
 
 class WeekdayListWidget extends StatefulWidget {
   const WeekdayListWidget(

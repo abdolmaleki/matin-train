@@ -1,7 +1,7 @@
 import 'package:dio/dio.dart';
-import 'package:hoivalani/core/config/dependency_injection/get_it.dart';
-import 'package:hoivalani/core/utils/constants/keys/sharead_preference.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:team_project/core/config/dependency_injection/get_it.dart';
+import 'package:team_project/core/utils/constants/keys/sharead_preference.dart';
 
 class DioInterceptor extends Interceptor {
   @override

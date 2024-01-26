@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/utils/assets/app_svg.dart';
-import 'package:hoivalani/core/utils/components/drop_down/drop_down_item.dart';
-import 'package:hoivalani/core/utils/constants/theme/colors.dart';
+import 'package:team_project/core/utils/assets/app_svg.dart';
+import 'package:team_project/core/utils/components/drop_down/drop_down_item.dart';
+import 'package:team_project/core/utils/constants/theme/colors.dart';
 
 class CustomDropDownTag extends StatelessWidget {
   const CustomDropDownTag(

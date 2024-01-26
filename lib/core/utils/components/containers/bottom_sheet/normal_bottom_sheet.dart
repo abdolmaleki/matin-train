@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:hoivalani/core/utils/constants/keys/global_keys.dart';
+import 'package:team_project/core/utils/constants/keys/global_keys.dart';
 
 Future<T?> showCustomBottomSheet<T>(
     {BuildContext? context,

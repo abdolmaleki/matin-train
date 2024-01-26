@@ -1,8 +1,8 @@
 import 'dart:convert';
-import 'package:hoivalani/core/utils/architecture/data/common_models/report.dart';
-import 'package:hoivalani/core/utils/architecture/data/common_models/report_category.dart';
-import 'package:hoivalani/core/utils/architecture/data/common_models/report_type.dart';
-import 'package:hoivalani/core/utils/assets/mocks/mock_factory.dart';
+import 'package:team_project/core/utils/architecture/data/common_models/report.dart';
+import 'package:team_project/core/utils/architecture/data/common_models/report_category.dart';
+import 'package:team_project/core/utils/architecture/data/common_models/report_type.dart';
+import 'package:team_project/core/utils/assets/mocks/mock_factory.dart';
 
 class MockReportTypeList implements MockData {
   String jsonData =
